@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+            width: 350px; /* Ajuste da largura do quadro */
+        }
+
+        h2 {
+            text-align: center;
+            color: #00ffff;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 8px; /* Ajuste no padding dos campos */
+            margin: 5px 0 15px; /* Ajuste no espaçamento entre os campos */
+            border: 2px solid #00ffff;
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        input[type="submit"], .back-button {
+            width: 100%;
+            padding: 10px;
+            margin: 15px 0;
+            background-color: #00ffff;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        input[type="submit"]:hover, .back-button:hover {
+            background-color: #00cccc;
+        }
+
+        .message {
+            display: none;
+            color: red;
+            font-size: 12px;
+        }
+
+        .back-button {
+            background-color: #666;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Cadastro de Usuário</h2>
+        <form action="/cadastro" method="POST">
+            <label for="username">Nome de Usuário:</label>
+            <input type="text" id="username" name="nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="senha" required>
+            <p id="passwordMessage" class="message">A senha deve ter no mínimo 6 caracteres, incluindo letras, números e caracteres especiais.</p>
+
+            <label for="confirm-password">Confirme sua Senha:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+
+            <input type="submit" value="Registrar">
+        </form>
+        <button class="back-button" onclick="window.location.href='/login'">Voltar</button>
+    </div>
+
+    <script>
+        document.getElementById('password').addEventListener('focus', function() {
+            document.getElementById('passwordMessage').style.display = 'block';
+        });
+
+        document.getElementById('password').addEventListener('blur', function() {
+            document.getElementById('passwordMessage').style.display = 'none';
+        });
+    </script>
+
+</body>
+</html>

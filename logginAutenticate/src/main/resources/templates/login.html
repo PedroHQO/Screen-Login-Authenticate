@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Tela de Login</title>
+    <style>
+        body {
+            background-color: #000000; /* Fundo preto */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+        }
+        .login-container {
+            background-color: #1b1b1b; /* Fundo escuro para o container */
+            padding: 40px;
+            border: 2px solid #00fffb; /* Borda azul fluorescente */
+            border-radius: 6px;
+            width: 300px;
+            box-shadow: 0 1px 3px rgba(27,31,35,.15);
+            text-align: center;
+        }
+        .login-container h1 {
+            font-size: 24px;
+            margin-bottom: 25px;
+            color: #ffffff; /* Texto branco */
+        }
+        .login-container label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #ffffff; /* Texto branco */
+            text-align: left;
+        }
+        .login-container input[type="email"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #00fffb; /* Borda azul fluorescente */
+            border-radius: 4px;
+            font-size: 14px;
+            background-color: #1b1b1b; /* Fundo escuro */
+            color: #ffffff; /* Texto branco */
+        }
+        .login-container input[type="email"]::placeholder,
+        .login-container input[type="password"]::placeholder {
+            color: #a3a3a3; /* Placeholder cinza */
+        }
+        .login-container button {
+            width: 100%;
+            background-color: #2ea44f;
+            color: #ffffff;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .login-container button:hover {
+            background-color: #22863a;
+        }
+        .login-container .options {
+            margin-top: 15px;
+        }
+        .login-container .options a {
+            color: #00fffb; /* Link azul fluorescente */
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .login-container .options a:hover {
+            text-decoration: underline;
+        }
+        .login-container .separator {
+            margin: 15px 0;
+            border-bottom: 1px solid #00fffb; /* Separador azul fluorescente */
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Entrar no Sistema</h1>
+        <form action="/login" method="post">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+
+            <label for="password">Senha</label>
+            <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+
+            <button type="submit">Entrar</button>
+        </form>
+        <div class="options">
+            <a href="/forgot-password">Esqueci minha senha</a>
+            <div class="separator"></div>
+            <a href="/register">Registrar-se</a>
+        </div>
+    </div>
+</body>
+</html>
