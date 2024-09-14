@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Bem-vindo à Nova Conexão!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header>
+    <h1>Minha primeira página utilizando HTML</h1>
+    <p>Me chamo Pedro Henrique</p>
+    <nav>
+        <p>Menu:</p>
+        <ul>
+            <li><a href="#sessao_principal">Sobre</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li><a href="/login">Voltar</a></li> <!-- Link para voltar ao login -->
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="sessao_principal">
+        <h2>Apresentação</h2>
+        <article>
+            <h3>Este projeto faz parte de um primeiro passo/sonho</h3>
+            <p>Inicialmente, fiz a tela de login.</p>
+            <p>Depois configurei o banco de dados com MySQL Workbench.</p>
+            <p>Adicionei as interfaces de cadastro e habilitei getters e setters.</p>
+            <p>Implementei ações para registrar no banco de dados as informações da tela de login.</p>
+            <p>Agora estou aprendendo a criar páginas HTML após clicar em "entrar".</p>
+            <img src="Screenshot_139.png" alt="Imagem do projeto">
+        </article>
+        <article>
+            <h3>O que estou aprendendo agora:</h3>
+            <p>Estou praticando para criar páginas HTML dinâmicas com Spring Boot!</p>
+        </article>
+    </section>
+</main>
+
+<section id="contato">
+    <h2>Entre em contato</h2>
+    <p>Preencha o formulário abaixo para entrar em contato!</p>
+    <form method="get">
+        <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome">
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+        </div>
+        <div class="form-group">
+            <label for="tel">Tel:</label>
+            <input type="number" id="tel" name="number">
+        </div>
+        <div class="form-group">
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem"></textarea>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Enviar">
+        </div>
+    </form>
+</section>
+
+<footer>
+    <p>Todos os direitos reservados &copy; 2024</p>
+</footer>
+
+</body>
+</html>
