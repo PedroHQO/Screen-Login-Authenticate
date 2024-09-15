@@ -17,6 +17,7 @@ import com.br.logginAutenticate.repository.UsuarioRepository;
 import com.br.logginAutenticate.service.CookieService;
 
 import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
 
@@ -33,7 +34,8 @@ public class LoginController {
 	}
 	
 	@GetMapping("/")
-	public String dashboard() {
+	public String dashboard(Model model, HttpServletRequest request) throws UnsupportedEncodingException {
+		model.addAttribute("nome", CookieService.getCookie(request, "nomeUsuario"));
 		return "index";
 	}
 	
