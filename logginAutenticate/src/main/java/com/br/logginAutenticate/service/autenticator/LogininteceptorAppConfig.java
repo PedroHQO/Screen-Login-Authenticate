@@ -17,7 +17,8 @@ public class LogininteceptorAppConfig implements WebMvcConfigurer {
 				"/login",
 				"/logar",
 				"error",
-				"/cadastro"
+				"/cadastro",
+				" "
 				);
 	}
 	

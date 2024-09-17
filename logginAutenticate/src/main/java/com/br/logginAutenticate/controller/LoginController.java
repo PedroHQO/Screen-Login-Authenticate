@@ -3,6 +3,7 @@ package com.br.logginAutenticate.controller;
 import java.io.UnsupportedEncodingException;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.SimpleMailMessage;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.br.logginAutenticate.model.Usuario;
 import com.br.logginAutenticate.repository.UsuarioRepository;
 import com.br.logginAutenticate.service.CookieService;
+import com.br.logginAutenticate.service.EmailService;
 
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
@@ -27,6 +29,9 @@ public class LoginController {
 	
 	@Autowired
 	private UsuarioRepository ur;
+	
+	@Autowired
+	private EmailService emailService; 
 	
 	@GetMapping("/login")
 	public String login() {
@@ -77,6 +82,13 @@ public class LoginController {
 		}
 		
 		ur.save(usuario);
+		
+		
+		//Enviar e-mail de confirmação de cadastro com mensagem
+		String assunto = "CONFIRMAÇÃO DE CADASTRO";
+		String corpo = "Olá " + usuario.getNome() + ", \n\nSeu cadastro foi realizado com sucesso no email: " + usuario.getEmail() + "!";
+		emailService.enviarEmailConfirmacao(usuario.getEmail(), assunto, corpo);
+		
 		return "redirect:/login";// Redireciona para a página de login após o cadastro
 	}
 
