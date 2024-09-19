@@ -16,13 +16,13 @@
 <b>Aqui estão algumas imagens do projeto:</b>
 
 ### Tela de Cadastro
-<img src="./images/tela_cadastro.png" alt="Tela de Cadastro" width="600"/>
+<img src="./logginAutenticate/images/tela_cadastro.png" alt="Tela de Cadastro" width="600"/>
 
 ### Tela de Login
-<img src="./images/tela_login.png" alt="Tela de Login" width="600"/>
+<img src="./logginAutenticate/images/tela_login.png" alt="Tela de Login" width="600"/>
 
 ### Tela Principal após Login
-<img src="./images/tela_principal.png" alt="Tela Principal" width="600"/>
+<img src="./logginAutenticate/images/tela_principal.png" alt="Tela Principal" width="600"/>
 
 
 <h2 id="technologies">💻 Technologies</h2>
