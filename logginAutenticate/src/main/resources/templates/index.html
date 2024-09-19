@@ -4,14 +4,95 @@
     <title>Bem-vindo à Nova Conexão!</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section h2, h3 {
+            color: #007BFF;
+        }
+
+        article {
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-group input[type="submit"] {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
 
 <header>
-    <h1>Minha primeira página utilizando HTML</h1>
-    <p>Me chamo Pedro Henrique</p>
+    <h1>Bem-vindo à Nova Conexão!</h1>
+    <p>Desenvolvido por Pedro Henrique</p>
     <nav>
-        <p>Menu:</p>
         <ul>
             <li><a href="#sessao_principal">Sobre</a></li>
             <li><a href="#contato">Contato</a></li>
@@ -22,42 +103,40 @@
 
 <main>
     <section id="sessao_principal">
-        <h2>Apresentação</h2>
+        <h2>Sobre o Projeto</h2>
         <article>
-            <h3>Este projeto faz parte de um primeiro passo/sonho</h3>
-            <p>Inicialmente, fiz a tela de login.</p>
-            <p>Depois configurei o banco de dados com MySQL Workbench.</p>
-            <p>Adicionei as interfaces de cadastro e habilitei getters e setters.</p>
-            <p>Implementei ações para registrar no banco de dados as informações da tela de login.</p>
-            <p>Agora estou aprendendo a criar páginas HTML após clicar em "entrar".</p>
-            <img src="Screenshot_139.png" alt="Imagem do projeto">
+            <h3>O que é este projeto?</h3>
+            <p>Este projeto representa o início de uma jornada emocionante no desenvolvimento de sistemas com interfaces modernas e funcionais. Ele foi criado com o intuito de explorar e aplicar tecnologias como Spring Boot, MySQL e HTML dinâmico.</p>
+            <p>O objetivo principal é criar um sistema de autenticação robusto, com telas de login e registro, além de funcionalidades como envio de e-mails de confirmação.</p>
+            <img src="/images/Screenshot_146.png" alt="Imagem do projeto">
+			<img src="/images/Screenshot_147.png" alt="Imagem do projeto">
         </article>
         <article>
-            <h3>O que estou aprendendo agora:</h3>
-            <p>Estou praticando para criar páginas HTML dinâmicas com Spring Boot!</p>
+            <h3>Mensagem de Motivação</h3>
+            <p>A jornada de mil quilômetros começa com um simples passo. Continue acreditando no seu potencial, pois cada linha de código escrita é um degrau na sua escada de conquistas. O aprendizado é contínuo e o sucesso está no caminho.</p>
         </article>
     </section>
 </main>
 
 <section id="contato">
     <h2>Entre em contato</h2>
-    <p>Preencha o formulário abaixo para entrar em contato!</p>
+    <p>Preencha o formulário abaixo para entrar em contato e saber mais sobre o projeto!</p>
     <form method="get">
         <div class="form-group">
             <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome">
+            <input type="text" id="nome" name="nome" required>
         </div>
         <div class="form-group">
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
+            <input type="email" id="email" name="email" required>
         </div>
         <div class="form-group">
             <label for="tel">Tel:</label>
-            <input type="number" id="tel" name="number">
+            <input type="tel" id="tel" name="tel" required>
         </div>
         <div class="form-group">
             <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" name="mensagem"></textarea>
+            <textarea id="mensagem" name="mensagem" required></textarea>
         </div>
         <div class="form-group">
             <input type="submit" value="Enviar">
